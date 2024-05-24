@@ -8,21 +8,18 @@ global filter
 filter = """ORDER BY due ASC, subject ASC;"""
 data = ''
 
-def login_required(func):
-    def secure_function():
-        user_value = request.cookies.get(cookie_name)
-        if user_value != None:
-            return redirect(url_for('login'))
-    return func()
-
 @app.route('/home')
-@login_required
 def home():
+    user_value = request.cookies.get(cookie_name)
+    if user_value == None:
+            return redirect(url_for('login'))
     return render_template('home.html')
 
 @app.route('/homework', methods=['GET', 'POST'])
-@login_required
 def homework():
+    user_value = request.cookies.get(cookie_name)
+    if user_value == None:
+            return redirect(url_for('login'))
     filter = request.form.get('filter')
     if filter == "0":
         filter = """ORDER BY due DESC, subject ASC;"""
@@ -37,8 +34,10 @@ def homework():
     return render_template('homework.html', data=data, page="homework") 
 
 @app.route('/add', methods=['GET','POST'])
-@login_required
 def addition():
+    user_value = request.cookies.get(cookie_name)
+    if user_value == None:
+            return redirect(url_for('login'))
     global newdata
     if request.method == 'POST':
         task = request.form.get('task')
@@ -52,7 +51,6 @@ def addition():
     return render_template('add.html', data=newdata, page="add")
 
 @app.route('/delete', methods=['GET', 'POST'])
-@login_required
 def delete():
     button_value = request.form.get('submit')
     submit(button_value)
@@ -90,8 +88,10 @@ def login():
     return render_template('login.html', error=error)
 
 @app.route('/subject/<name>', methods=['GET', 'POST'])
-@login_required
 def subjectview(name):
+    user_value = request.cookies.get(cookie_name)
+    if user_value == None:
+            return redirect(url_for('login'))
     user_value = request.cookies.get(cookie_name)
     newdata = user_subject(user_value)
     if str(name) in newdata:
@@ -104,8 +104,10 @@ def subjectview(name):
         return redirect(url_for('subjects'))
     
 @app.route('/subject', methods=['GET', 'POST'])
-@login_required
 def subjects():
+    user_value = request.cookies.get(cookie_name)
+    if user_value == None:
+            return redirect(url_for('login'))
     error = None
     user_value = request.cookies.get(cookie_name)
     data = subjectget(user_value)
