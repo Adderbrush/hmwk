@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="271.189" height="215.708" viewBox="0 0 271.189 215.708">
+  <defs>
+    <filter id="Path_13" x="-13.916" y="-19.423" width="299.02" height="235.132" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="5" result="blur"/>
+      <feFlood flood-opacity="0.608"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Subtraction_1" x="0" y="0" width="271.189" height="215.708" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="5" result="blur-2"/>
+      <feFlood flood-opacity="0.608"/>
+      <feComposite operator="in" in2="blur-2"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="HMW_ribbon" transform="translate(-64.483 -47.999)">
+    <g transform="matrix(1, 0, 0, 1, 64.48, 48)" filter="url(#Subtraction_1)">
+      <path id="Subtraction_1-2" data-name="Subtraction 1" d="M240.127,184.5h0L120.078,141.7.028,184.5V1.81C.028,1.178.019.569,0,0H240.155c-.019.561-.028,1.169-.028,1.81V184.5Z" transform="translate(15.52 12.5)" fill="#0d5d96" stroke="rgba(0,0,0,0)" stroke-width="1"/>
+    </g>
+    <path id="Path_14" data-name="Path 14" d="M9.228,0V14.5H0Z" transform="translate(70.773 60.499)" fill="#042034"/>
+    <path id="Path_15" data-name="Path 15" d="M0,0V14.5H9.228Z" transform="translate(320 60.499)" fill="#042034"/>
+    <text id="HMWK" transform="translate(200 163)" fill="#f7f8f9" font-size="55" font-family="OpenSans-Semibold, Open Sans" font-weight="600" opacity="0.999"><tspan x="-89" y="0">HMWK</tspan></text>
+  </g>
+</svg>

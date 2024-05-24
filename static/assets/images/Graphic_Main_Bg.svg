@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1920" height="1095" viewBox="0 0 1920 1095">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_5029" data-name="Rectangle 5029" width="1920" height="1095" fill="#fff" stroke="#707070" stroke-width="1"/>
+    </clipPath>
+  </defs>
+  <g id="Graphic_Main_Bg" transform="translate(-15348 1549)">
+    <g id="Rectangle_5028" data-name="Rectangle 5028" transform="translate(15348 -1549)" fill="#2d5f7f" stroke="#707070" stroke-width="1">
+      <rect width="1920" height="1080" stroke="none"/>
+      <rect x="0.5" y="0.5" width="1919" height="1079" fill="none"/>
+    </g>
+    <g id="Mask_Group_2" data-name="Mask Group 2" transform="translate(15348 -1549)" clip-path="url(#clip-path)">
+      <g id="Group_5314" data-name="Group 5314">
+        <g id="Path_41" data-name="Path 41" transform="translate(817)" fill="#06215c" opacity="0.167">
+          <path d="M 1380.5 1273.18310546875 L 1182.217163085938 1171.887939453125 L 1.214108228683472 0.5 L 1380.5 0.5 L 1380.5 1273.18310546875 Z" stroke="none"/>
+          <path d="M 2.42822265625 1 L 1182.513916015625 1171.478149414062 L 1380 1272.3662109375 L 1380 1 L 2.42822265625 1 M 0 0 L 1381 0 L 1381 1274 L 1181.92041015625 1172.2978515625 L 0 0 Z" stroke="none" fill="#707070"/>
+        </g>
+        <g id="Path_42" data-name="Path 42" transform="translate(2140.644 489.643) rotate(111)" fill="#4a1b48" opacity="0.167">
+          <path d="M 1380.5 1273.18310546875 L 1182.217163085938 1171.887939453125 L 1.214108228683472 0.5 L 1380.5 0.5 L 1380.5 1273.18310546875 Z" stroke="none"/>
+          <path d="M 2.42822265625 1 L 1182.513916015625 1171.478149414062 L 1380 1272.3662109375 L 1380 1 L 2.42822265625 1 M 0 0 L 1381 0 L 1381 1274 L 1181.92041015625 1172.2978515625 L 0 0 Z" stroke="none" fill="#707070"/>
+        </g>
+        <g id="Path_43" data-name="Path 43" transform="translate(0 1381) rotate(-90)" fill="#3a8bbb" opacity="0.167">
+          <path d="M 0.5 1273.18310546875 L 0.5 0.5 L 1379.785888671875 0.5 L 198.7828521728516 1171.887939453125 L 0.5 1273.18310546875 Z" stroke="none"/>
+          <path d="M 1 1 L 1 1272.3662109375 L 198.486083984375 1171.478149414062 L 1378.57177734375 1 L 1 1 M 0 0 L 1381 0 L 199.07958984375 1172.2978515625 L 0 1274 L 0 0 Z" stroke="none" fill="#707070"/>
+        </g>
+        <g id="Path_44" data-name="Path 44" transform="translate(-386.1 911.268) rotate(-79)" fill="#4a1b48" opacity="0.29">
+          <path d="M 1380.5 1273.18310546875 L 1182.217163085938 1171.887939453125 L 1.214108228683472 0.5 L 1380.5 0.5 L 1380.5 1273.18310546875 Z" stroke="none"/>
+          <path d="M 2.42822265625 1 L 1182.513916015625 1171.478149414062 L 1380 1272.3662109375 L 1380 1 L 2.42822265625 1 M 0 0 L 1381 0 L 1381 1274 L 1181.92041015625 1172.2978515625 L 0 0 Z" stroke="none" fill="#707070"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

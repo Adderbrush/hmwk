@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+{% block content %}
+<h3>
+  <img
+    src="/static/assets/images/icon_view.svg"
+    style="width: 54px; height: 54px"
+  />Homeworks
+</h3>
+
+<section class="filter">
+  <div class="subhead">Filter By:</div>
+  <form
+    class="filter_form"
+    id="filter"
+    action="/homework"
+    method="post"
+  >
+    <select class="filter_form" name="filter" id="filter">
+      <option value="0">Date</option>
+      <option value="1">Subject</option>
+    </select>
+    <input class="submit" type="submit" value="Submit" />
+  </form>
+</section>
+<br>
+{% if data|length > 0%}
+<table>
+  <thead>
+    <tr class="headings">
+      <th>Task</th>
+      <th>Subject</th>
+      <th>Due</th>
+    </tr>
+  </thead>
+  {% for row in data %}
+  <tr>
+    <td class="body">{{ row[1] }}</td>
+    <td class="body"><a href="/subject/{{ row[2] }}">{{ row[2] }}</a></td>
+    <td class="body"> {{ row[3] }}</td>
+    <td class="body">
+      <form action="/delete" method="post">
+        <button class="submit" type="submit" name="submit" value="{{ row[0] }}">
+          submit
+        </button>
+      </form>
+    </td>
+  </tr>
+  {% endfor %}
+</table>
+{% else %} No homeworks!
+<a href="/add"> Click to add</a>
+{% endif %}
+</div>
+</section>
+{% endblock %}

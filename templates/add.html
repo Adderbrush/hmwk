@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h3>
+  <img
+    src="/static/assets/images/icon_add.svg"
+    style="width: 54px; height: 54px"
+  />Homeworks
+</h3>
+      <form action="" method ="POST">
+        <table>
+          <tr>
+            <td><label class="addlabel" for ="task">Task:</label> </td>
+            <td><input class="addform" type="text" id="task" name = "task" value="{{request.form.task}}" placeholder="Enter Task" ></td>
+          </tr>
+          <tr>
+            <td><label class="addlabel" for ="subject">Subject:</label></td>
+            <td><input class="addform" type="text" id="subject" name="subject" value="{{request.form.subject}}" list="subjects">
+            <td><datalist id="subjects">
+            {% for subject in data %}
+              <option value = "{{ subject}}">
+            {% endfor %}
+          </datalist></td>
+          <tr>
+            <td><label class="addlabel" for ="due">Due:</label></td>
+            <td><input class="addform dateform" type="date" id="due" name = "due" value = {{request.form.due}}></td>
+            <td><button class="submit"type = "submit"> Submit</button>  </td>
+          </tr> 
+      </table>
+      </form>
+  </body>
+</html>
+{% endblock %}

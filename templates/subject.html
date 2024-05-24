@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% block content %}
+<h3>
+  <img
+    src="/static/assets/images/icon_view.svg"
+    style="width: 54px; height: 54px"
+  />{{ subject }}
+</h3>
+{% if data|length > 0%}
+<table>
+  <thead>
+    <tr class="headings">
+      <th>Task</th>
+      <th>Due</th>
+    </tr>
+  </thead>
+  {% for row in data %}
+  <tr class="body">
+    <td>{{ row[1] }}</td>
+    <td>{{ row[3] }}</td>
+    <td>
+      <form action="/delete" method="post">
+        <button class="submit" type="submit" name="submit" value="{{ row[0] }}">
+          submit
+        </button>
+      </form>
+    </td>
+  </tr>
+  {% endfor %}
+</table>
+{% else %} No homeworks!
+<a href="/add"> Click to add</a>
+{% endif %}
+</div>
+</section>
+{% endblock %}

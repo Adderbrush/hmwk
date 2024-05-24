@@ -1,0 +1,38 @@
+<html>
+  <head>
+    <title>Homework</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="/static/assets/css/main.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <main class="wrapper">
+      <section class="outer">
+        <div class="inner">
+          <header>
+            <section class="logo">
+              <img class="ribbon" src="/static/assets/images/HMW_ribbon.svg" />
+              <div class="title">
+                <h1>
+                  Homework <br />
+                  Tracker
+                </h1>
+                <h5 class="subhead">Created by Lucian</h5>
+              </div>
+            </section>
+
+            <nav class="navigate">
+              <a class="navigate home_navigate" href="/home">Home</a>
+              <a class="{{ 'selected' if page == 'homework' else 'homework_navigate' }} navigate" href="/homework"
+                >View Homework</a
+              >
+              <a class="{{ 'selected' if page == 'add' else 'add_navigate' }} navigate" href="/add">Add Homework</a>
+              <a class="{{ 'selected' if page == 'subject' else 'subject_navigate' }} navigate" href="/subject"
+                >View Subjects</a
+              >
+            </nav>
+          </header>
+          {% block content %}{% endblock %}
+    </main>
+  </body>
+</html>

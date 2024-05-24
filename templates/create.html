@@ -1,0 +1,39 @@
+<html>
+  <head>
+    <title>create account</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="/static/assets/css/main.css" rel="stylesheet" />
+  </head>
+  <body>
+  <main class ="wrapper"
+  <section class="container">
+    <div class="container">
+      <h1>HMWK</h1>
+      <h3>Create Account</h3>
+      <br />
+      <form action="" method="post">
+        <input
+          class="login_input"
+          type="text"
+          placeholder="Username"
+          name="username"
+          value="{{
+          request.form.username }}"
+        />
+        <input
+          class="login_input"
+          type="password"
+          placeholder="Password"
+          name="password"
+          value="{{
+          request.form.password }}"
+        />
+        <input class="login_button" type="submit" value="Create" />
+      </form>
+      <br />
+      <a class="link" href="/">Login</a>
+    </div>
+  </section>
+</main>
+  </body>
+</html>

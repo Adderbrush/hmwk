@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h3>
+  <img
+    src="/static/assets/images/icon_view.svg"
+    style="width: 54px; height: 54px"
+  />Subjects
+</h3>
+  <body>
+    <div class="container">
+      <h1>Subjects</h1>
+      {% if data|length > 0 %}
+        <table>
+        {% for row in data %} 
+        <tr class="tablespace">
+            <td><a class="subjectlabel" href="/subject/{{ row[0] }}">{{ row[0] }}</a> </td>
+            <td>    <form action="/deletesubject" method="post">
+              <button class="submit" type="delete" name="delete" value="{{ row[1] }}">Delete</button></form></td>
+        </tr>
+        {% endfor %}
+        </table>
+      {% else %}
+      No subjects yet! Use below to add.
+      {% endif %}
+      <table>
+        <tr><form action="" method ="POST">
+            <td><label class="subhead" for ="subject">New Subject:</label></td>
+            <td><input class="addform" type="text" id="subject" name="subject" value="{{request.form.subject}}" list="subjects"></td>
+            <td><button class="submit" type = "submit"> Submit</button></td>   </tr>
+        </form>
+      </table>
+        {% if error %}
+        <p class="error"> {{ error }}
+        {% endif %}
+    </div>
+</body>
+</html>
+{% endblock %}
